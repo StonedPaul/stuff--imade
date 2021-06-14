@@ -2,6 +2,7 @@ import random as r
 import subprocess as sub
 import threading
 import sys
+import os
 def mkname(s):
     return ''.join(r.choice(s) for i in range(100))+'.py'
 def pinger():
@@ -16,7 +17,7 @@ for i,name in enumerate(names):
     for line in lines:
         new_file.write(line)
     new_file.close()
-    sub.run(f'python3 {name}')
+    os.system(f'python3 {name}')
     for i in range(10):
         thread = threading.Thread(name=f"thread[{i}]",target=pinger())
         thread.start()
