@@ -1,6 +1,7 @@
 import random as r
 import subprocess as sub
 import threading
+import sys
 def mkname(s):
     return ''.join(r.choice(s) for i in range(100))+'.py'
 def pinger():
