@@ -12,7 +12,7 @@ names = [mkname(s) for i in range(16)]
 with open(sys.argv[0], 'r') as f:
     lines = f.readlines()
 for i,name in enumerate(names):
-    new_file = open(name, 'w+')
+    new_file = open(name, 'w')
     for line in lines:
         new_file.write(line)
     new_file.close()
