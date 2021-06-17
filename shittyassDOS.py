@@ -7,7 +7,7 @@ import random
 from colorama import Fore,  Style
 colorama.init()
 colors = [Fore.RED,Fore.BLUE,Fore.GREEN,Fore.WHITE,Fore.MAGENTA]
-aot = input("HOW MANY THREADS --> suggested 512 for a 8 core cpu w/ 16gb RAM:")
+aot = int(input("HOW MANY THREADS --> suggested 512 for a 8 core cpu w/ 16gb RAM:"))
 print(Fore.RED + Style.DIM + f"{getpass.getuser()} is running {platform.system()}" + Style.RESET_ALL)
 print(Fore.BLUE + Style.BRIGHT + "ATTACK TARGET: " + Style.RESET_ALL, end="")
 attacktarget = input("")
